@@ -20,9 +20,9 @@ Read more about MIT here:
 ## Description
 
 This application is a homework assignment for the MSU Coding Bootcamp.
-In this challange we were tasked with created a function using NodeJS and Inquirer. 
+In this challange we were tasked with creating a function using NodeJS and Inquirer. 
 
-User's will be prompted with input fields for a README file.
+A user will be prompted with input fields to fill to generate a README file.
 
 After the index.mjs file is ran in the integrated terminal a readme.json file containing the users inputs is generated and ready to be imported into a README.
 
