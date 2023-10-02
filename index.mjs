@@ -42,19 +42,34 @@ function init() {
     });
 }
 
-// Function to save data to a JSON file
-function saveToJsonFile(fileName, data) {
-  fs.writeFileSync(fileName, JSON.stringify(data, null, 2));
+// Function to save data to a Markdown file
+function saveToMarkdownFile(fileName, data) {
+  const markdownContent = `
+# ${data.title}
+
+## Description
+${data.description}
+
+## Installation
+${data.installation}
+
+## Usage
+${data.usage}
+
+## License
+${data.license}
+  `;
+
+  fs.writeFileSync(fileName, markdownContent);
 }
 
 // Function call to initialize app
 init().then((answers) => {
-  // Specify the file path where you want to save the JSON file
-  const jsonFilePath = 'README.json';
+  // Specify the file path where you want to save the Markdown file
+  const markdownFilePath = 'README.md';
 
-  // Save the user input data to the JSON file
-  saveToJsonFile(jsonFilePath, answers);
+  // Save the user input data to the Markdown file
+  saveToMarkdownFile(markdownFilePath, answers);
 
-  console.log(`README.json has been generated.`);
+  console.log(`README.md has been generated.`);
 });
-
