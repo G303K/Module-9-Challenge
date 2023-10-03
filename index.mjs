@@ -28,6 +28,16 @@ const questions = [
     name: 'license',
     message: 'Enter license information:',
   },
+  {
+    type: 'editor',
+    name: 'contributors',
+    message: 'Add contributors (separate with commas):',
+  },
+  {
+    type: 'input',
+    name: 'contact',
+    message: 'Enter contact information (e.g., email, website):',
+  },
 ];
 
 // Create a function to initialize the app
@@ -42,34 +52,43 @@ function init() {
     });
 }
 
-// Function to save data to a Markdown file
-function saveToMarkdownFile(fileName, data) {
-  const markdownContent = `
-# ${data.title}
+// Function to generate the README content
+function generateReadme(answers) {
+  const contributorsList = answers.contributors.split(',').map((contributor) => `- ${contributor.trim()}`).join('\n');
+
+  return `
+# ${answers.title}
 
 ## Description
-${data.description}
+${answers.description}
 
 ## Installation
-${data.installation}
+${answers.installation}
 
 ## Usage
-${data.usage}
+${answers.usage}
 
 ## License
-${data.license}
-  `;
+${answers.license}
 
-  fs.writeFileSync(fileName, markdownContent);
+## Contributors
+${contributorsList}
+
+## Contact
+${answers.contact}
+  `;
 }
 
 // Function call to initialize app
 init().then((answers) => {
-  // Specify the file path where you want to save the Markdown file
-  const markdownFilePath = 'README.md';
+  // Specify the file path where you want to save the README.md file
+  const readmeFilePath = 'README.md';
 
-  // Save the user input data to the Markdown file
-  saveToMarkdownFile(markdownFilePath, answers);
+  // Generate the README content
+  const readmeContent = generateReadme(answers);
 
-  console.log(`README.md has been generated.`);
+  // Save the README content to the README.md file
+  fs.writeFileSync(readmeFilePath, readmeContent);
+
+  console.log('README.md has been generated.');
 });
