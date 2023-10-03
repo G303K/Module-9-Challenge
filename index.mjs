@@ -1,3 +1,4 @@
+// Import necessary libraries
 import fs from 'fs';
 import inquirer from 'inquirer';
 
@@ -40,22 +41,24 @@ const questions = [
   },
 ];
 
-// Create a function to initialize the app
+// Function to initialize the app and prompt users for input
 function init() {
   return inquirer
     .prompt(questions)
     .then((answers) => {
-      return answers;
+      return answers; // Return user's answers
     })
     .catch((error) => {
       console.error('Error:', error);
     });
 }
 
-// Function to generate the README content
+// Function to generate the README content based on user's answers
 function generateReadme(answers) {
+  // Split contributors and format them as a list
   const contributorsList = answers.contributors.split(',').map((contributor) => `- ${contributor.trim()}`).join('\n');
 
+  // Create the README content using template literals
   return `
 # ${answers.title}
 
@@ -79,7 +82,7 @@ ${answers.contact}
   `;
 }
 
-// Function call to initialize app
+// Function call to initialize the app, gather user input, and generate README
 init().then((answers) => {
   // Specify the folder path where you want to save the README.md file
   const folderPath = 'generated-readme/';
