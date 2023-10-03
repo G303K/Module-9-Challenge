@@ -29,9 +29,9 @@ const questions = [
     message: 'Enter license information:',
   },
   {
-    type: 'editor',
+    type: 'input',
     name: 'contributors',
-    message: 'Add contributors (separate with commas):',
+    message: 'Enter contributors (separate with commas):',
   },
   {
     type: 'input',
@@ -81,8 +81,9 @@ ${answers.contact}
 
 // Function call to initialize app
 init().then((answers) => {
-  // Specify the file path where you want to save the README.md file
-  const readmeFilePath = 'README.md';
+  // Specify the folder path where you want to save the README.md file
+  const folderPath = 'generated-readme/';
+  const readmeFilePath = `${folderPath}README.md`;
 
   // Generate the README content
   const readmeContent = generateReadme(answers);
@@ -90,5 +91,5 @@ init().then((answers) => {
   // Save the README content to the README.md file
   fs.writeFileSync(readmeFilePath, readmeContent);
 
-  console.log('README.md has been generated.');
+  console.log(`README.md has been generated in the "${folderPath}" folder.`);
 });
