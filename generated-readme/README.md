@@ -1,23 +1,21 @@
 
-# example
+# Example title
 
 ## Description
-example
+Here is a sample description
 
 ## Installation
-example
+Here is where the installation info will be
 
 ## Usage
-example
+Here are the usage instructions
 
 ## License
-example
+MIT
 
 ## Contributors
-- example 1
-- example 2
-- example 3
+- example@github.com
 
 ## Contact
-example@gmail.com
+example@github.com
   
