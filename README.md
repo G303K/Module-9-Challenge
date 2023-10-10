@@ -28,7 +28,7 @@ After the prompts are completed a README file is generated in the generated-read
 
 ## Google Drive Video Link
 
-- https://drive.google.com/file/d/1IKSg-2y6OicM8KSklROyW7_IBTbb7Xqt/view
+- https://drive.google.com/file/d/10vQCWmmNQb5UVOoFjo1yFdX-ewaY1LAo/view
 
 ## Installation
 
@@ -45,7 +45,7 @@ To use, first download the above required applications in [Installation](#instal
 - Clone the repository to your local machine.
 - After cloning the repository, open the directory using Visual Studio Code.
 - To view content used, expand the MODULE-9-CHALLENGE folder.
-- Using node and Inquirer, run the index.mjs file.
+- Using node and Inquirer, run the index.js file.
 
 ## Contributors:
 
