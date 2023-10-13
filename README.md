@@ -28,7 +28,7 @@ After the prompts are completed a README file is generated in the generated-read
 
 ## Google Drive Video Link
 
-- https://drive.google.com/file/d/10vQCWmmNQb5UVOoFjo1yFdX-ewaY1LAo/view
+- https://drive.google.com/file/d/1EOvtWGeJGPOfTcrA9L1uHlGnJgIbNCs-/view
 
 ## Installation
 

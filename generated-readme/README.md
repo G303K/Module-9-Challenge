@@ -1,5 +1,5 @@
 
-# Example
+# Example title
 
 ## Table of Contents
 - [Description](#description)
@@ -10,13 +10,13 @@
 - [Contact](#contact)
 
 ## Description
-Example
+Here is where you will find a description of the app
 
 ## Installation
-Example
+Here are the example installation instructions
 
 ## Usage
-Example
+Here is the usage information
 
 ## License
 [![License](https://img.shields.io/badge/License-MIT-brightgreen.svg)](LICENSE)
@@ -24,7 +24,7 @@ Example
 This project is licensed under the MIT license. See the [LICENSE](LICENSE) file for more details.
 
 ## Contributors
-- example@gmail.com
+- example@github.com
 
 ## Contact
 example@gmail.com
