@@ -58,9 +58,21 @@ function generateReadme(answers) {
   // Split contributors and format them as a list
   const contributorsList = answers.contributors.split(',').map((contributor) => `- ${contributor.trim()}`).join('\n');
 
+  // License badge and description
+  const licenseBadge = `[![License](https://img.shields.io/badge/License-${answers.license}-brightgreen.svg)](LICENSE)`;
+  const licenseInfo = `This project is licensed under the ${answers.license} license. See the [LICENSE](LICENSE) file for more details.`;
+
   // Create the README content using template literals
   return `
 # ${answers.title}
+
+## Table of Contents
+- [Description](#description)
+- [Installation](#installation)
+- [Usage](#usage)
+- [License](#license)
+- [Contributors](#contributors)
+- [Contact](#contact)
 
 ## Description
 ${answers.description}
@@ -72,7 +84,9 @@ ${answers.installation}
 ${answers.usage}
 
 ## License
-${answers.license}
+${licenseBadge}
+
+${licenseInfo}
 
 ## Contributors
 ${contributorsList}
@@ -96,3 +110,4 @@ init().then((answers) => {
 
   console.log(`README.md has been generated in the "${folderPath}" folder.`);
 });
+

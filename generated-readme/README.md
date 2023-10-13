@@ -1,22 +1,30 @@
 
-# Here is an example title
+# Example
+
+## Table of Contents
+- [Description](#description)
+- [Installation](#installation)
+- [Usage](#usage)
+- [License](#license)
+- [Contributors](#contributors)
+- [Contact](#contact)
 
 ## Description
-Here is a template description
+Example
 
 ## Installation
-Here is where you would find installation information
+Example
 
 ## Usage
-MIT
+Example
 
 ## License
-MIT
+[![License](https://img.shields.io/badge/License-MIT-brightgreen.svg)](LICENSE)
+
+This project is licensed under the MIT license. See the [LICENSE](LICENSE) file for more details.
 
 ## Contributors
-- Contributor 1
-- 2
-- & 3
+- example@gmail.com
 
 ## Contact
 example@gmail.com
